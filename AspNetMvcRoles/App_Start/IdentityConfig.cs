@@ -89,15 +89,15 @@ namespace AspNetMvcRoles
     }
 
     // Configure the application role manager used in this application. RoleManager is defined in ASP.NET Identity and is used by the application.
-    public class ApplicationRoleManager : RoleManager<IdentityRole>
+    public class ApplicationRoleManager : RoleManager<ApplicationRole>
     {
-        public ApplicationRoleManager(IRoleStore<IdentityRole, string> store) : base(store)
+        public ApplicationRoleManager(IRoleStore<ApplicationRole, string> store) : base(store)
         {
         }
 
         public static ApplicationRoleManager Create(IdentityFactoryOptions<ApplicationRoleManager> options, IOwinContext context)
         {
-            var roleStore = new RoleStore<IdentityRole>(context.Get<ApplicationDbContext>());
+            var roleStore = new RoleStore<ApplicationRole>(context.Get<ApplicationDbContext>());
             return new ApplicationRoleManager(roleStore);
         }
     }
