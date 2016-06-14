@@ -1,5 +1,5 @@
-# AspNetMvcRoles
-__A boilerplate ASP.NET MVC 5 project with role manager for Identity 2.0 enabled.__
+# AspNetMvcRoles Sample Project
+__A sample ASP.NET MVC 5 project with role manager for Identity 2.0 enabled.__
 
 For more information on the new Identity framework please check this article out: 
 
